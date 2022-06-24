@@ -15,7 +15,6 @@ const Result = () => {
   const appUser = useSelector((state: RootState) => state.user.user);
 
   useEffect(() => {
-    debugger;
     const CalculateAnswer = () => {
       let sum = 0;
       for (let index = 0; index < userSubmissions.length; index++) {

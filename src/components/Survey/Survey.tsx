@@ -30,28 +30,26 @@ const Survey = () => {
   const dispatch = useDispatch();
   const [questionNumber, setQuestionNumber] = useState<number>(1);
   const handleNext = (selectedOption: string) => {
-    debugger;
     const getCurrentQuestion = filterQuestionsById(questionNumber);
     const answer: QuestionPoints = {
       value: Number(selectedOption),
       // @ts-ignore: Object is possibly 'null'.
-      name:getCurrentQuestion?.options.find(x=>x.value===Number(selectedOption))?.name
-    }
-    if (questionNumber === Questions.length)
-    {
-      
+      name: getCurrentQuestion?.options.find(
+        (x) => x.value === Number(selectedOption)
+      )?.name,
+    };
+    if (questionNumber === Questions.length) {
       dispatch(setSurveyAnswer(answer));
       handleFinish();
       return;
-      }
+    }
     if (questionNumber < Questions.length) {
       setQuestionNumber(questionNumber + 1);
     }
-    dispatch(setSurveyAnswer(answer))
+    dispatch(setSurveyAnswer(answer));
   };
 
   const handleBack = () => {
-    debugger;
     if (questionNumber === 1) {
       dispatch(setSurveyStep(SurveyStep.user));
     }

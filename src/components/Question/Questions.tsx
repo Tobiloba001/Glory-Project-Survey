@@ -15,19 +15,16 @@ const SurveyQuestions = ({
   onFinish: () => void;
 }) => {
   const [selectedOption, setSelectedOption] = useState<string>();
-
   function Select({ optionsArr }: { optionsArr?: QuestionPoints[] }) {
     return (
       <section className='questionsContainer__options'>
-        <select
-          onChange={(e) =>
-            setSelectedOption(e.target.value)
-          }>
+        <select onChange={(e) => setSelectedOption(e.target.value)}>
           {optionsArr?.map((item: QuestionPoints, index: number) => {
             return (
               <option
                 key={item.value + index}
                 id={item.name}
+                selected={Number(selectedOption) === item.value ? true : false}
                 value={item.value}>
                 {item.name}
               </option>
@@ -46,15 +43,20 @@ const SurveyQuestions = ({
             <section key={index + item.value}>
               <input
                 type='radio'
+                
+                defaultChecked={
+                  Number(selectedOption) === item.value ? true : false
+                }
                 id={item.name}
                 name='select'
                 value={item.value}
+                checked={Number(selectedOption) === item.value ? true : false}
                 onChange={(e) => {
                   console.log(e);
-                  setSelectedOption(e.target.value)
+                  setSelectedOption(e.target.value);
                 }}
               />{" "}
-              {item.name}
+              <label htmlFor={item.name}>{item.name}</label>
             </section>
           );
         })}

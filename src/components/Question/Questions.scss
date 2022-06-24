@@ -58,7 +58,15 @@ select {
     width: 441px;
     border: 2px solid #FFFFFF;
     opacity: 1;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     height: 53px;
+    background-color: transparent;
+}
+select option {
+    background-color: transparent;
+    color: #FFFFFF !important;
+}
+
+select::-ms-expand {
     background-color: transparent;
 }
