@@ -33,7 +33,14 @@ const User = () => {
         <label className={userStyles.userContainer__error}>{error}</label>
       )}
       <div className={userStyles.userContainer__button}>
-        <AppButton height='60px' width='100px' value='NEXT' onClick={onNext} lineHeight={""} />
+        <AppButton
+          height='66px'
+          width='245px'
+          value='NEXT'
+          onClick={onNext}
+          lineHeight={""}
+          hasIcon={"true"}
+        />
       </div>
     </div>
   );

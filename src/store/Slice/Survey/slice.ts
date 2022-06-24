@@ -15,7 +15,6 @@ const SurveySlice = createSlice({
   reducers: {
     setSurveyAnswer: (state, action:PayloadAction<QuestionPoints>) => {
       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-      
       const arr = state.answers;
       const isExists = state.answers.find(x => x.name === action.payload.name);
       if(!isExists)
@@ -29,7 +28,6 @@ const SurveySlice = createSlice({
         arr.push(action.payload)
         state.answers=arr
       }
-     
       return state
     },
   },

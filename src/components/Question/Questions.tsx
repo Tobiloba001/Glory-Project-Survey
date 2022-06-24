@@ -15,6 +15,7 @@ const SurveyQuestions = ({
   onFinish: () => void;
 }) => {
   const [selectedOption, setSelectedOption] = useState<string>();
+  const [selectedName, setSelectedName] = useState<string>();
   function Select({ optionsArr }: { optionsArr?: QuestionPoints[] }) {
     return (
       <section className='questionsContainer__options'>
@@ -40,13 +41,9 @@ const SurveyQuestions = ({
       <section className='questionsContainer__options'>
         {optionsArr?.map((item: QuestionPoints, index: number) => {
           return (
-            <section key={index + item.value}>
+            <section key={index}>
               <input
                 type='radio'
-                
-                defaultChecked={
-                  Number(selectedOption) === item.value ? true : false
-                }
                 id={item.name}
                 name='select'
                 value={item.value}
@@ -55,7 +52,7 @@ const SurveyQuestions = ({
                   console.log(e);
                   setSelectedOption(e.target.value);
                 }}
-              />{" "}
+              />
               <label htmlFor={item.name}>{item.name}</label>
             </section>
           );
@@ -71,14 +68,14 @@ const SurveyQuestions = ({
             <section key={index + item.value}>
               <input
                 type='checkbox'
-                name='checkbox'
+                name={item.name}
                 id={item.name}
+                checked={selectedName===item.name ? true : false}
                 value={item.value}
-                onChange={(e) =>
-                  setSelectedOption(e.target.value)
-                }
+                onClick={()=>setSelectedName(item.name)}
+                onChange={(e) => setSelectedOption(e.target.value)}
               />
-              {item.name}
+              <label htmlFor={item.name}>{item.name}</label>
             </section>
           );
         })}
@@ -104,10 +101,9 @@ const SurveyQuestions = ({
           <AppButton
             value='Next'
             // @ts-ignore: Object is possibly 'null'.
-            onClick={() =>onNext(selectedOption)
-            }
-            width={"10px"}
-            height={"40px"}
+            onClick={() => onNext(selectedOption)}
+            width={"245px"}
+            height={"66px"}
             lineHeight={""}
             hasIcon={"true"}
           />
@@ -130,7 +126,6 @@ const SurveyQuestions = ({
             ? { width: "66.6%" }
             : { width: "100%" }
         }>
-        <div>sadas</div>
       </section>
     </>
   );

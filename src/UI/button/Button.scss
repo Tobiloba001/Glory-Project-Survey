@@ -5,9 +5,22 @@
     text-align: left;
     font: normal normal bold 20px/32px Inter;
     letter-spacing: 0.4px;
-    color: #000000;
     opacity: 1;
-    display: flex;
+
+
+
+    &__text {
+        display: flex;
+        text-align: center;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        justify-content: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .appButton:hover {
@@ -31,3 +44,5 @@
 .backButton:hover {
     cursor: pointer;
 }
+
+@import url('../../assets/fonts.scss');

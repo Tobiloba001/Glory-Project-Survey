@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowCircleRight } from "phosphor-react";
 import { ArrowCircleLeft } from "phosphor-react";
-import "./Button.css";
+import "./Button.scss";
 interface IProps {
   value: string;
   width: string;
@@ -13,16 +13,21 @@ interface IProps {
 
 export function AppButton(props: IProps) {
   return (
-    <button className='appButton' onClick={props.onClick}>
-      {props.value}{" "}
-      {props.hasIcon && (
-        <ArrowCircleRight
-          style={{ marginTop: "10px", marginLeft: "5px" }}
-          size={15}
-          color='#000'
-          weight='bold'
-        />
-      )}
+    <button
+      className='appButton'
+      style={{ width: `${props.width}`, height: `${props.height}` }}
+      onClick={props.onClick}>
+      <label className='appButton__text'>
+        {props.value}
+        {props.hasIcon && (
+          <ArrowCircleRight
+            style={{ marginTop: "10px", marginLeft: "5px" }}
+            size={15}
+            color='#000'
+            weight='bold'
+          />
+        )}
+      </label>
     </button>
   );
 }
