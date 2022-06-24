@@ -1,0 +1,33 @@
+.appButton {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+    text-align: left;
+    font: normal normal bold 20px/32px Inter;
+    letter-spacing: 0.4px;
+    color: #000000;
+    opacity: 1;
+    display: flex;
+}
+
+.appButton:hover {
+    cursor: pointer;
+}
+
+.backButton {
+    text-align: left;
+    font: normal normal bold 15px/30px Inter;
+    letter-spacing: 0.3px;
+    color: #FFFFFF;
+    background-color: transparent;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-top: 20px;
+    border-color: transparent;
+    display: flex;
+    gap: 10px;
+}
+
+.backButton:hover {
+    cursor: pointer;
+}

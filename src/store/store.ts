@@ -4,6 +4,8 @@ import slices from "./Slice";
 export const store = configureStore({
   reducer: {
     survey: slices.surveySlice,
+    user:slices.userSlice,
+    step:slices.stepSlice
   },
 });
 
