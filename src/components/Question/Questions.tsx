@@ -49,7 +49,6 @@ const SurveyQuestions = ({
                 value={item.value}
                 checked={Number(selectedOption) === item.value ? true : false}
                 onChange={(e) => {
-                  console.log(e);
                   setSelectedOption(e.target.value);
                 }}
               />

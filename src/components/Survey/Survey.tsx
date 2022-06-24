@@ -16,7 +16,7 @@ export interface IQuestion {
   options: QuestionPoints[] | undefined;
   selectedOption?: string;
 }
-function filterQuestionsById(questionNumber: number): IQuestion {
+export function filterQuestionsById(questionNumber: number): IQuestion {
   const getQuestion = Questions.find((x) => x.id === questionNumber);
   return {
     id: getQuestion?.id,
@@ -29,6 +29,8 @@ function filterQuestionsById(questionNumber: number): IQuestion {
 const Survey = () => {
   const dispatch = useDispatch();
   const [questionNumber, setQuestionNumber] = useState<number>(1);
+
+
   const handleNext = (selectedOption: string) => {
     const getCurrentQuestion = filterQuestionsById(questionNumber);
     const answer: QuestionPoints = {

@@ -21,8 +21,6 @@ function App() {
         {currentSurveyStep === SurveyStep.user && <User />}
         {currentSurveyStep === SurveyStep.questions && appUser && <Survey />}
         {currentSurveyStep === SurveyStep.result && appUser && <Result />}
-
-        
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {AppButton} from "../../UI/button/Buttons";
-import userStyles from "./User.module.scss";
+import "./User.scss";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../store/Slice/User/slice";
 import { SurveyStep, setSurveyStep } from "../../store/Slice/Step/slice";
@@ -18,21 +18,17 @@ const User = () => {
     await dispatch(setSurveyStep(SurveyStep.questions));
   };
   return (
-    <div className={userStyles.userContainer}>
-      <p className={userStyles.userContainer__header}>Who are you?</p>
-      <h3 className={userStyles.userContainer__subHeader}>
-        Please enter your name.
-      </h3>
+    <div>
+      <p className='userContainer__header'>Who are you?</p>
+      <h3 className='userContainer__subHeader'>Please enter your name.</h3>
       <input
         type='text'
         onChange={(e) => setSurveyUser(e.target.value)}
-        className={userStyles.userContainer__input}
+        className='userContainer__input'
         placeholder='John Doe'
       />
-      {error && (
-        <label className={userStyles.userContainer__error}>{error}</label>
-      )}
-      <div className={userStyles.userContainer__button}>
+      {error && <label className='userContainer__error'>{error}</label>}
+      <div className='userContainer__button'>
         <AppButton
           height='66px'
           width='245px'

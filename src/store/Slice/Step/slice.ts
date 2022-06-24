@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
-
 export const enum SurveyStep{
     intro,
     user,
