@@ -40,9 +40,9 @@ const Result = () => {
 
       <div className='resultContainer__button'>
         <AppButton
-          height='60px'
-          width='100px'
-          value='START SURVEY'
+          height='66px'
+          width='245px'
+          value='START NEW'
           hasIcon={""}
           onClick={onStart}
           lineHeight={""}

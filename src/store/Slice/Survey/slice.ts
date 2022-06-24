@@ -2,6 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { QuestionPoints } from "../../../constants";
 interface IAnswer {
   answers: QuestionPoints[];
+  question: number;
 }
 const initialState: IAnswer = {
   answers: [
@@ -10,6 +11,7 @@ const initialState: IAnswer = {
       name: "",
     },
   ],
+  question:1
 };
 const SurveySlice = createSlice({
   name: "survey",
@@ -31,8 +33,12 @@ const SurveySlice = createSlice({
       }
       return state;
     },
+    setCurrentQuestion: (state, action: PayloadAction<number>) => {
+      state.question=action.payload;
+      return state;
+    }
   },
 });
 
-export const { setSurveyAnswer } = SurveySlice.actions;
+export const { setSurveyAnswer,setCurrentQuestion } = SurveySlice.actions;
 export default SurveySlice.reducer;

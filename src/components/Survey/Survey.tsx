@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Questions from "../../constants/index";
 import SurveyQuestions from "../Question/Questions";
 import { useDispatch } from "react-redux";
-import { SurveyStep, setSurveyStep } from "../../store/Slice/Step/slice";
-import {setSurveyAnswer } from '../../store/Slice/Survey/slice'
+import { SurveyStep, setSurveyStep} from "../../store/Slice/Step/slice";
+import {setSurveyAnswer,setCurrentQuestion } from '../../store/Slice/Survey/slice'
 
 export type QuestionPoints = {
   name?: string;
@@ -31,7 +31,7 @@ const Survey = () => {
   const [questionNumber, setQuestionNumber] = useState<number>(1);
 
 
-  const handleNext = (selectedOption: string) => {
+  const handleNext = async (selectedOption: string) => {
     const getCurrentQuestion = filterQuestionsById(questionNumber);
     const answer: QuestionPoints = {
       value: Number(selectedOption),
@@ -48,7 +48,8 @@ const Survey = () => {
     if (questionNumber < Questions.length) {
       setQuestionNumber(questionNumber + 1);
     }
-    dispatch(setSurveyAnswer(answer));
+    await dispatch(setCurrentQuestion(questionNumber))
+    await dispatch(setSurveyAnswer(answer));
   };
 
   const handleBack = () => {

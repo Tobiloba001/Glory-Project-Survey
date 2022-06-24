@@ -1,111 +1,127 @@
 .questionsContainer {
+  &__header {
+    text-align: center;
+    font: normal normal bold 15px/24px Inter;
+    letter-spacing: 0px;
+    color: #ffffff;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-top: 300px;
+  }
 
-    &__header {
-        text-align: center;
-        font: normal normal bold 15px/24px Inter;
-        letter-spacing: 0px;
-        color: #FFFFFF;
-        text-transform: uppercase;
-        opacity: 1;
+  &__subHeader {
+    text-align: center;
+    font: normal normal bold 48px/59px Inter;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    justify-content: center;
+    text-align: center;
+    section {
+      display: flex;
+      gap: 10px;
     }
+  }
 
-    &__subHeader {
-        text-align: center;
-        font: normal normal bold 48px/59px Inter;
-        letter-spacing: 0px;
-        color: #FFFFFF;
-        opacity: 1;
-    }
+  &__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    align-items: center;
+    margin-top: 100px;
+  }
 
-    &__options {
-        display: flex;
-        flex-direction: row;
-        gap: 200px;
-        justify-content: center;
-        text-align: center;
-section {
-        display: flex;
-        gap: 10px
-    }
-    }
+ 
 
-
-
-    &__button {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: right;
-        align-items: center;
-        margin-top: 100px;
-    }
-
-    &__footer {
-        bottom: 0;
-        position: fixed;
-        background: #FFFFFF 0% 0% no-repeat padding-box;
-        border-radius: 20px;
-        opacity: 1;
-        margin-left: -30%;
-    }
-
-    &__error {
-        display: flex;
-        justify-content: center;
-        color: red;
-    }
+  &__error {
+    display: flex;
+    justify-content: center;
+    color: red;
+  }
 }
 
 select {
-    width: 441px;
-    border: 2px solid #FFFFFF;
-    opacity: 1;
-    color: #FFFFFF !important;
-    height: 53px;
-    background-color: transparent;
+  width: 441px;
+  border: 2px solid #ffffff;
+  opacity: 1;
+  color: #ffffff !important;
+  height: 53px;
+  background-color: transparent;
 }
 select option {
-    background-color: transparent;
-    color: #FFFFFF !important;
+  background-color: transparent;
+  color: #ffffff !important;
 }
 
 select::-ms-expand {
-    background-color: transparent;
+  background-color: transparent;
 }
 input[type="radio"] {
-    appearance: none;
-    background-color: transparent;
-    margin: 0;
-    font: inherit;
-    width: 30px;
-    height: 30px;
-    border: 0.15em solid grey;
-    border-radius: 50%;
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  font: inherit;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #6a6a6a;
+  border-radius: 50%;
 }
 
-
-
-input[type='radio']::after {
-    border: 2px solid #6A6A6A;
-    border-radius: 230px;
-    background-color: transparent !important;
-    opacity: 1;
-    width: 30px;
-    height: 30px;
-    content: none;
+input[type="radio"]::after {
+  border: 2px solid #6a6a6a;
+  border-radius: 230px;
+  background-color: transparent !important;
+  opacity: 1;
+  width: 30px;
+  height: 30px;
+  content: none;
 }
 
 input[type="radio"]:checked {
-    content: icon;
-    background-color: white;
+  content: icon;
+  background-color: white;
+  background-image: url(../../assets/icons/checked.png);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  font: inherit;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #6a6a6a;
+}
+
+input[type="checkbox"]::after {
+  border: 2px solid #6a6a6a;
+  border-radius: 230px;
+  background-color: transparent !important;
+  opacity: 1;
+  width: 30px;
+  height: 30px;
+  content: none;
+}
+
+input[type="checkbox"]:checked {
+  content: icon;
+  background-color: white;
+  background-image: url(../../assets/icons/checked.png);
 }
 
 label {
-    text-align: left;
-    font: normal normal normal 24px/32px Inter;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
+  text-align: left;
+  font: normal normal normal 24px/32px Inter;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
 }
 
-@import url('../../assets/fonts.scss');
+@import url("../../assets/fonts.scss");

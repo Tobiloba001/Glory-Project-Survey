@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import Home from "./components/Home/Home";
 import { useSelector } from "react-redux";
 import { SurveyStep } from "./store/Slice/Step/slice";
@@ -10,7 +10,9 @@ import Result from "./components/Result/Result";
 function App() {
   const currentSurveyStep = useSelector((state: RootState) => state.step.step);
   const appUser = useSelector((state: RootState) => state.user.user);
-
+  // const currentQuestionNumber = useSelector(
+  //   (state: RootState) => state.survey.question
+  // );
   return (
     <>
       {currentSurveyStep === SurveyStep.questions && (
@@ -22,6 +24,7 @@ function App() {
         {currentSurveyStep === SurveyStep.questions && appUser && <Survey />}
         {currentSurveyStep === SurveyStep.result && appUser && <Result />}
       </div>
+     
     </>
   );
 }

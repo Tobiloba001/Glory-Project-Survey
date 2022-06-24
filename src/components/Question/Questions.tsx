@@ -116,16 +116,6 @@ const SurveyQuestions = ({
           />
         </section>
       </section>
-      <section
-        className='questionsContainer__footer'
-        style={
-          question.id === 1
-            ? { width: "33.3%" }
-            : question.id === 2
-            ? { width: "66.6%" }
-            : { width: "100%" }
-        }>
-      </section>
     </>
   );
 };
