@@ -8,6 +8,7 @@ import User from "./components/User/User";
 import Survey from "./components/Survey/Survey";
 import Result from "./components/Result/Result";
 function App() {
+  document.title = "Survey App";
   const currentSurveyStep = useSelector((state: RootState) => state.step.step);
   const appUser = useSelector((state: RootState) => state.user.user);
   // const currentQuestionNumber = useSelector(
