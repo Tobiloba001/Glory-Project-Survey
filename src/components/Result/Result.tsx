@@ -26,10 +26,12 @@ const Result = () => {
     CalculateAnswer();
   }, [userSubmissions]);
 
-  const onStart = async () => {
-    await dispatch(setSurveyStep(SurveyStep.intro));
-    await dispatch(setUser(""));
+  const onStart = (dispatch) => {
+    dispatch(setSurveyStep(SurveyStep.intro));
+    dispatch(setUser(""));
   };
+
+  
   return (
     <div>
       <p className='resultContainer__header'>RESULT</p>
@@ -44,7 +46,7 @@ const Result = () => {
           width='245px'
           value='START NEW'
           hasIcon={""}
-          onClick={onStart}
+          onClick={() => onStart(dispatch)}
           lineHeight={""}
         />
       </div>

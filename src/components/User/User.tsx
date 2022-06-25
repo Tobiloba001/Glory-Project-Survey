@@ -14,13 +14,23 @@ const User = () => {
       return;
     }
     setError("");
-    await dispatch(setUser(surveyUser));
-    await dispatch(setSurveyStep(SurveyStep.questions));
+
+    dispatchNext(dispatch);
   };
 
+  const dispatchNext = (dispatch) => {
+    dispatch(setUser(surveyUser));
+    dispatch(setSurveyStep(SurveyStep.questions));
+  };
+  
+
   const onBack = async () => {
-    await dispatch(setUser(""));
-    await dispatch(setSurveyStep(SurveyStep.intro));
+    dispatchBack(dispatch);
+  };
+
+  const dispatchBack = (dispatch) => {
+    dispatch(setUser(""));
+    dispatch(setSurveyStep(SurveyStep.intro));
   };
   return (
     <div>
