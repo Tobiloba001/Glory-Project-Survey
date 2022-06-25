@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Questions from "../../constants/index";
+import Questions from "../../constants/Questions";
 import SurveyQuestions from "../Question/Questions";
 import { useDispatch } from "react-redux";
 import { SurveyStep, setSurveyStep} from "../../store/Slice/Step/slice";

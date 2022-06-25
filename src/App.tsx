@@ -7,6 +7,7 @@ import { RootState } from "./store/store";
 import User from "./components/User/User";
 import Survey from "./components/Survey/Survey";
 import Result from "./components/Result/Result";
+// import ProgressBar from "./components/Progress/Progress";
 function App() {
   document.title = "Survey App";
   const currentSurveyStep = useSelector((state: RootState) => state.step.step);
@@ -25,7 +26,10 @@ function App() {
         {currentSurveyStep === SurveyStep.questions && appUser && <Survey />}
         {currentSurveyStep === SurveyStep.result && appUser && <Result />}
       </div>
-     
+      {/* {currentSurveyStep === SurveyStep.questions &&
+        currentQuestionNumber > 0 && (
+          <ProgressBar questionNumber={currentQuestionNumber} />
+        )} */}
     </>
   );
 }

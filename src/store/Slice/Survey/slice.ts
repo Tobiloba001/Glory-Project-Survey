@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { QuestionPoints } from "../../../constants";
+import { QuestionPoints } from "../../../constants/Questions";
 interface IAnswer {
   answers: QuestionPoints[];
   question: number;
