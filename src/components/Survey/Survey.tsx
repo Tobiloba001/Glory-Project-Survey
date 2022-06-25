@@ -48,15 +48,17 @@ const Survey = () => {
     if (questionNumber < Questions.length) {
       setQuestionNumber(questionNumber + 1);
     }
-    dispatchNext(answer,questionNumber)
+    dispatchNext(answer, questionNumber, dispatch);
   };
 
-  const dispatchNext = (answer: QuestionPoints, questionNumber: number) => {
-    return dispatch => {
-      dispatch(setCurrentQuestion(questionNumber))
+  const dispatchNext = (
+    answer: QuestionPoints,
+    questionNumber: number,
+    dispatch: any
+  ) => {
+    dispatch(setCurrentQuestion(questionNumber));
     dispatch(setSurveyAnswer(answer));
-    }
-  }
+  };
 
   const handleBack = () => {
     if (questionNumber === 1) {
