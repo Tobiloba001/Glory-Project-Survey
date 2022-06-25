@@ -31,7 +31,7 @@ const Survey = () => {
   const [questionNumber, setQuestionNumber] = useState<number>(1);
 
 
-  const handleNext = async (selectedOption: string) => {
+  const handleNext =  (selectedOption: string) => {
     const getCurrentQuestion = filterQuestionsById(questionNumber);
     const answer: QuestionPoints = {
       value: Number(selectedOption),

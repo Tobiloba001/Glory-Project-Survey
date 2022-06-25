@@ -8,7 +8,7 @@ const User = () => {
   const dispatch = useDispatch();
   const [surveyUser, setSurveyUser] = useState<string>("");
   const [error, setError] = useState<string>("");
-  const onNext = async () => {
+  const onNext =  () => {
     if (!surveyUser) {
       setError("Please enter a valid name");
       return;
@@ -24,7 +24,7 @@ const User = () => {
   };
   
 
-  const onBack = async () => {
+  const onBack =  () => {
     dispatchBack(dispatch);
   };
 
