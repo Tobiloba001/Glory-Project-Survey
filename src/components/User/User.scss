@@ -49,9 +49,11 @@
 
     &__button {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        margin-top: 30px;
-        margin-top: 50px;
+        text-align: right;
+        align-items: center;
+        margin-top: 100px;
     }
 
     &__error {

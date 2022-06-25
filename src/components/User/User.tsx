@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {AppButton} from "../../UI/button/Buttons";
+import { AppButton, BackButton } from "../../UI/button/Buttons";
 import "./User.scss";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../store/Slice/User/slice";
@@ -16,6 +16,11 @@ const User = () => {
     setError("");
     await dispatch(setUser(surveyUser));
     await dispatch(setSurveyStep(SurveyStep.questions));
+  };
+
+  const onBack = async () => {
+    await dispatch(setUser(""));
+    await dispatch(setSurveyStep(SurveyStep.intro));
   };
   return (
     <div>
@@ -36,6 +41,14 @@ const User = () => {
           onClick={onNext}
           lineHeight={""}
           hasIcon={"true"}
+        />
+
+        <BackButton
+          value='Back'
+          onClick={onBack}
+          width={"10px"}
+          height={"40px"}
+          lineHeight={"40px"}
         />
       </div>
     </div>
