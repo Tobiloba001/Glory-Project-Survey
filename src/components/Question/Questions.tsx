@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AppButton, BackButton } from "../../UI/button/Buttons";
+import { AppButton, BackButton } from "../../utils/button/Buttons";
 import { IQuestion, QuestionPoints } from "../Survey/Survey";
 import "./Questions.scss";
 

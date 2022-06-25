@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AppButton, BackButton } from "../../UI/button/Buttons";
+import { AppButton, BackButton } from "../../utils/button/Buttons";
 import "./User.scss";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../store/Slice/User/slice";

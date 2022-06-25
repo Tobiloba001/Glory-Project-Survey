@@ -1,5 +1,5 @@
 import React from "react";
-import { AppButton } from "../../UI/button/Buttons";
+import { AppButton } from "../../utils/button/Buttons";
 import "./Home.scss";
 import { useDispatch } from "react-redux";
 import { setSurveyStep, SurveyStep } from "../../store/Slice/Step/slice";

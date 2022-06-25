@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Result.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../store/store";
-import { AppButton } from "../../UI/button/Buttons";
+import { AppButton } from "../../utils/button/Buttons";
 import { SurveyStep, setSurveyStep } from "../../store/Slice/Step/slice";
 import { setUser } from "../../store/Slice/User/slice";
 const Result = () => {
