@@ -56,8 +56,9 @@ const Survey = () => {
     questionNumber: number,
     dispatch: any
   ) => {
-    dispatch(setCurrentQuestion(questionNumber));
     dispatch(setSurveyAnswer(answer));
+    dispatch(setCurrentQuestion(questionNumber));
+
   };
 
   const handleBack = () => {

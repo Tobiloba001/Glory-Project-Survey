@@ -1,9 +1,8 @@
 .progressBar {
-    background-color: #fff;
-    height: 20px;
-    display: flex;
-    margin-top: 160px;
-    position: relative;
+    width: 95%;
+        position: absolute;
+        margin-left: -25%;
+        margin-top: 159px;
     section {
         background-color: #fff;
         width: 33.3%;
@@ -11,3 +10,25 @@
 
 
 }
+progress {
+    border: none;
+    height: 10px;
+    background: crimson;
+  }
+  
+  progress {
+    color: lightblue;
+  }
+  
+  progress::-moz-progress-bar {
+    background: lightcolor;
+  }
+  
+  progress::-webkit-progress-value {
+    background: white;
+  }
+  
+  progress::-webkit-progress-bar {
+    background: blue;
+  }
+  

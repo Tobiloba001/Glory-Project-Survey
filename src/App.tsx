@@ -7,14 +7,14 @@ import { RootState } from "./store/store";
 import User from "./components/User/User";
 import Survey from "./components/Survey/Survey";
 import Result from "./components/Result/Result";
-// import ProgressBar from "./components/Progress/Progress";
+ import ProgressBar from "./components/Progress/Progress";
 function App() {
   document.title = "Survey App";
   const currentSurveyStep = useSelector((state: RootState) => state.step.step);
   const appUser = useSelector((state: RootState) => state.user.user);
-  // const currentQuestionNumber = useSelector(
-  //   (state: RootState) => state.survey.question
-  // );
+  const currentQuestionNumber = useSelector(
+    (state: RootState) => state.survey.question
+  );
   return (
     <>
       {currentSurveyStep === SurveyStep.questions && (
@@ -26,10 +26,10 @@ function App() {
         {currentSurveyStep === SurveyStep.questions && appUser && <Survey />}
         {currentSurveyStep === SurveyStep.result && appUser && <Result />}
       </div>
-      {/* {currentSurveyStep === SurveyStep.questions &&
+      {currentSurveyStep === SurveyStep.questions &&
         currentQuestionNumber > 0 && (
           <ProgressBar questionNumber={currentQuestionNumber} />
-        )} */}
+        )}
     </>
   );
 }
