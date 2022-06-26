@@ -1,34 +1,16 @@
 .progressBar {
-    width: 95%;
+    // border: 1px solid #707070;
+        border-radius: 20px;
+        opacity: 1;
         position: absolute;
-        margin-left: -25%;
         margin-top: 159px;
+        margin-left: -500px;
+            width: 70%;
     section {
-        background-color: #fff;
-        width: 33.3%;
-    }
-
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+            border-radius: 20px 0px 0px 20px;
+            opacity: 1;
+            position: fixed;
+        }
 
 }
-progress {
-    border: none;
-    height: 10px;
-    background: crimson;
-  }
-  
-  progress {
-    color: lightblue;
-  }
-  
-  progress::-moz-progress-bar {
-    background: lightcolor;
-  }
-  
-  progress::-webkit-progress-value {
-    background: white;
-  }
-  
-  progress::-webkit-progress-bar {
-    background: blue;
-  }
-  

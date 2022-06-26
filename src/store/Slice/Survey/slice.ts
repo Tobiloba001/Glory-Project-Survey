@@ -6,7 +6,7 @@ interface IAnswer {
 }
 const initialState: IAnswer = {
   answers: [],
-  question:1
+  question:0
 };
 const SurveySlice = createSlice({
   name: "survey",

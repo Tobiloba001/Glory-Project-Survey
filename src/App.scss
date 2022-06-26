@@ -27,16 +27,15 @@ body .user {
   opacity: 1;
 
   &__footer {
-    border-radius: 20px;
-    margin-top: 15vh;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: -510px;
-
-    section {
-      background: #ffffff 0% 0% no-repeat padding-box;
-      width: 200px;
-    }
+    position: absolute;
+  text-align: right;
+  font: normal normal bold 16px/20px Inter;
+  letter-spacing: 0px;
+  color: #767676;
+  text-transform: uppercase;
+  opacity: 1;
+  margin-top: 120px;
+  margin-left: 60%;
   }
 
 

@@ -15,6 +15,7 @@ function App() {
   const currentQuestionNumber = useSelector(
     (state: RootState) => state.survey.question
   );
+  console.log(currentQuestionNumber);
   return (
     <>
       {currentSurveyStep === SurveyStep.questions && (
@@ -26,10 +27,21 @@ function App() {
         {currentSurveyStep === SurveyStep.questions && appUser && <Survey />}
         {currentSurveyStep === SurveyStep.result && appUser && <Result />}
       </div>
-      {currentSurveyStep === SurveyStep.questions &&
-        currentQuestionNumber > 0 && (
-          <ProgressBar questionNumber={currentQuestionNumber} />
-        )}
+      {currentSurveyStep === SurveyStep.questions && (
+        <label
+          style={
+            currentQuestionNumber === 2
+              ? { marginTop: "100px", marginLeft: "1000px" }
+              : {}
+          }
+          className='user__footer'>
+          question {currentQuestionNumber + 1} of 3{" "}
+        </label>
+      )}
+
+      {currentSurveyStep === SurveyStep.questions && (
+        <ProgressBar questionNumber={currentQuestionNumber} />
+      )}
     </>
   );
 }
