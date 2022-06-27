@@ -3,29 +3,28 @@ import "./Progress.scss";
 
 function setWithByQuestionNumber(qnumber: number) {
   debugger;
-  if (qnumber === 0) {
+  if (qnumber ===1) {
     return {
       width: "33.3%",
       backgroundColor: "#fff",
     };
   }
-  if (qnumber === 1) {
+  if (qnumber === 2) {
     return {
       width: "66.3%",
       backgroundColor: "#fff",
     };
   }
-  if (qnumber === 2) {
+  if (qnumber === 3) {
     return {
       width: "95%",
-      marginLeft: '-190px',
-      marginTop:'-20px',
       backgroundColor: "#fff",
     };
   }
 }
 const ProgressBar = ({ questionNumber }: { questionNumber: number }) => (
   <div className='progressBar'>
+    <label className="progressBar__footer" style={questionNumber===3?{marginTop:'-20px'}:{}}>Question {questionNumber } of 3</label>
     <section
       style={
         questionNumber === 0

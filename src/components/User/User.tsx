@@ -33,7 +33,7 @@ const User = () => {
     dispatch(setSurveyStep(SurveyStep.intro));
   };
   return (
-    <div>
+    <center>
       <p className='userContainer__header'>Who are you?</p>
       <h3 className='userContainer__subHeader'>Please enter your name.</h3>
       <input
@@ -61,7 +61,7 @@ const User = () => {
           lineHeight={"40px"}
         />
       </div>
-    </div>
+    </center>
   );
 };
 

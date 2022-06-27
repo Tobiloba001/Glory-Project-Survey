@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AppButton, BackButton } from "../../utils/button/Buttons";
+import ProgressBar from "../Progress/Progress";
 import { IQuestion, QuestionPoints } from "../Survey/Survey";
 import "./Questions.scss";
 
@@ -116,6 +117,8 @@ const SurveyQuestions = ({
           />
         </section>
       </section>
+
+      <ProgressBar questionNumber={question?.id}/>
     </>
   );
 };

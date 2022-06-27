@@ -2,7 +2,7 @@ body {
   background: #0d0d0d 0% 0% no-repeat padding-box;
   opacity: 1;
   color: white;
-  display: flex;
+  //display: flex;
   justify-content: center;
   margin-top: 3vh;
   height: 92vh;
@@ -17,7 +17,7 @@ body {
 
 body .user {
   position: absolute;
-  margin-left: 55%;
+  margin-left: 75%;
   margin-top: 20px;
   text-align: center;
   font: normal normal bold 16px/20px Inter;
@@ -26,17 +26,7 @@ body .user {
   text-transform: uppercase;
   opacity: 1;
 
-  &__footer {
-    position: absolute;
-  text-align: right;
-  font: normal normal bold 16px/20px Inter;
-  letter-spacing: 0px;
-  color: #767676;
-  text-transform: uppercase;
-  opacity: 1;
-  margin-top: 120px;
-  margin-left: 60%;
-  }
+ 
 
 
   @media (min-width:200px) {
